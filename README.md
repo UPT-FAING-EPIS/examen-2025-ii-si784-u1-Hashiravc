@@ -81,7 +81,7 @@ npm install
 cp .env.example .env
 php artisan key:generate
     </pre>
-    <p>Configurar `.env` con tu base de datos:</p>
+    <p>Configurar <code>.env</code> con tu base de datos:</p>
     <pre>
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
