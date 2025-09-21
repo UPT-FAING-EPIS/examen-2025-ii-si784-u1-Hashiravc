@@ -39,3 +39,54 @@ Plataforma web para inscribirse en cursos online, gestionar progresos y permitir
 - Panel de usuario  
 
 ## 🗂️ Estructura del Proyecto
+matriculaonline/
+├── app/
+├── database/
+│ └── matricula_cursos.sql
+├── frontend/
+├── routes/
+├── public/
+├── tests/
+├── .env.example
+├── composer.json
+└── package.json
+
+## 🛠️ Instalación
+```bash
+git clone https://github.com/UPT-FAING-EPIS/examen-2025-ii-si784-u1-Hashiravc.git
+cd matriculaonline
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+
+Configurar .env con tu base de datos:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=matricula_cursos
+DB_USERNAME=root
+DB_PASSWORD=
+
+Importar base de datos en phpMyAdmin: database/matricula_cursos.sql
+
+👤 Autor
+
+Nombre: Belén Vargas
+📝 Diagramas
+Diagrama de flujo del proceso de matrícula
+graph LR
+A[Usuario] --> B[Buscar curso]
+B --> C[Ver detalles del curso]
+C --> D[Matricularse]
+D --> E[Confirmación de matrícula]
+E --> F[Panel de usuario]
+Secuencia de inscripción
+sequenceDiagram
+Usuario ->> Sistema: Solicita lista de cursos
+Sistema -->> Usuario: Envía lista de cursos
+Usuario ->> Sistema: Selecciona curso
+Sistema -->> Usuario: Muestra detalles
+Usuario ->> Sistema: Realiza matrícula
+Sistema -->> Usuario: Confirma inscripción
+
