@@ -1,66 +1,188 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+📚 Proyecto: Aplicación de Matrícula de Cursos Online
+🎯 Objetivo
+Desarrollar una plataforma web que permita a los usuarios inscribirse en cursos online, gestionar su progreso y a los administradores/educadores crear y administrar cursos y matrículas.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+⚙️ Stack Tecnológico
+Backend: PHP con Laravel
 
-## About Laravel
+Frontend: React
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Base de datos: MySQL (phpMyAdmin)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Herramienta de desarrollo: VS Code
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Entorno local: XAMPP 8.1.25.0
 
-## Learning Laravel
+🚀 Funcionalidades Principales
+Catálogo de cursos con búsqueda y filtrado por categoría, nivel, etc.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Visualización de detalles del curso (descripción, temario, duración, instructor, precio).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Proceso de matrícula en cursos.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Gestión de matrículas y usuarios inscritos.
 
-## Laravel Sponsors
+Notificaciones de inscripción y recordatorios.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+🔧 Backend (API Laravel)
+Framework: Laravel
 
-### Premium Partners
+Endpoints RESTful:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+GET /courses — Listar cursos disponibles.
 
-## Contributing
+GET /courses/{id} — Detalle de curso.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+POST /enrollments — Matricularse en un curso.
 
-## Code of Conduct
+GET /enrollments/{userId} — Listar cursos inscritos de un usuario.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+POST /courses — Crear curso (admin/instructor).
 
-## Security Vulnerabilities
+PUT /courses/{id} — Editar curso.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+DELETE /courses/{id} — Eliminar curso.
 
-## License
+Base de datos: MySQL
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Autenticación: JWT y roles de usuario.
+
+Pruebas: Unitarias y de integración.
+
+🎨 Frontend (React)
+Framework: React
+
+Funcionalidades:
+
+Catálogo de cursos y buscador.
+
+Vista de detalle y proceso de matrícula.
+
+Panel de usuario para ver cursos inscritos y progreso.
+
+📋 Consideraciones
+Validación de datos en frontend y backend.
+
+Crear la infraestructura en nube para el despliegue utilizando IaC (Terraform).
+
+Crear automatización de despliegue en nube mediante Github Actions.
+
+Crear automatización que genere el diagrama de clases de la aplicación mediante Github Actions.
+
+Crear automatización que genere la documentación del código mediante Github Actions.
+
+Crear automatización que genere el escaneo de código utilizando SonarCloud, asegurar 0 bugs, 0 vulnerabilidades de seguridad, reporte en markdown publicado en github.
+
+Crear automatización que genere el escaneo de código utilizando Semgrep, asegurar 0 bugs, 0 vulnerabilidades de seguridad, reporte en markdown publicado en github.
+
+Crear automatización que genere el escaneo de código utilizando Snyk, asegurar 0 bugs, 0 vulnerabilidades de seguridad, reporte en markdown publicado en github.
+
+🗂️ Estructura del Proyecto
+text
+matriculaonline/
+├── app/                 # Backend Laravel
+├── bootstrap/
+├── config/
+├── database/           # Migraciones y seeders
+│   └── matricula_cursos.sql  # Estructura de la base de datos
+├── frontend/           # Aplicación React
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── vendor/
+├── .env.example        # Variables de entorno (example)
+├── artisan            # CLI de Laravel
+├── composer.json      # Dependencias PHP
+├── composer.lock
+├── package.json       # Dependencias Node.js
+└── README.md          # Este archivo
+🛠️ Instalación y Configuración
+Requisitos previos
+PHP 8.1+
+
+Composer
+
+Node.js y npm
+
+MySQL
+
+XAMPP (opcional)
+
+Pasos de instalación
+Clonar el repositorio:
+
+bash
+git clone https://github.com/UPT-FAING-EPIS/examen-2025-ii-si784-u1-Hashiravc.git
+cd matriculaonline
+Instalar dependencias PHP:
+
+bash
+composer install
+Instalar dependencias JavaScript:
+
+bash
+npm install
+Configurar entorno:
+
+bash
+cp .env.example .env
+php artisan key:generate
+Configurar las variables de base de datos en el archivo .env:
+
+text
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=matricula_cursos
+DB_USERNAME=root
+DB_PASSWORD=
+Importar base de datos:
+
+Abrir phpMyAdmin
+
+Crear base de datos llamada matricula_cursos
+
+Importar el archivo database/matricula_cursos.sql
+
+Ejecutar migraciones:
+
+bash
+php artisan migrate
+Ejecutar el servidor de desarrollo:
+
+bash
+# Backend (Laravel)
+php artisan serve
+
+# Frontend (React)
+npm run dev
+📊 Estado del Proyecto
+✅ Backend Laravel implementado
+
+✅ Frontend React implementado
+
+✅ Base de datos MySQL diseñada
+
+✅ Estructura básica del proyecto completada
+
+🔄 Funcionalidades en desarrollo
+
+👤 Autor
+Nombre: [Tu nombre]
+
+Usuario GitHub: Hashiravd
+
+Correo: hv2022075480@virtual.upt.pe
+
+📝 Licencia
+Este proyecto es desarrollado para el examen de la primera unidad de la Universidad Privada de Tacna.
+
+📌 URLs importantes:
+
+Repositorio: https://github.com/UPT-FAING-EPIS/examen-2025-ii-si784-u1-Hashiravc
+
+Aplicación publicada: [Por definir]
+
+<p align="center"> <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a> </p>
