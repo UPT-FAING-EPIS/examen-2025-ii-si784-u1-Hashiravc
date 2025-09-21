@@ -170,19 +170,11 @@ npm run dev
 🔄 Funcionalidades en desarrollo
 
 👤 Autor
-Nombre: [Tu nombre]
+Nombre: Hashira Belén Vargas Candia
 
-Usuario GitHub: Hashiravd
-
-Correo: hv2022075480@virtual.upt.pe
 
 📝 Licencia
 Este proyecto es desarrollado para el examen de la primera unidad de la Universidad Privada de Tacna.
 
-📌 URLs importantes:
-
-Repositorio: https://github.com/UPT-FAING-EPIS/examen-2025-ii-si784-u1-Hashiravc
-
-Aplicación publicada: [Por definir]
 
 <p align="center"> <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a> </p>
